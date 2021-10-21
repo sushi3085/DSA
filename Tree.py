@@ -10,15 +10,42 @@ class Tree:
             return
         self.root = root
     
-    def generate(root):
-        if not root:
+    # insert levelorder
+    def generate(datas:list):
+        if not datas:
             return
 
-        self.root = None
-        waitingList = []
-        waitingList.append(root.pop(0))
+        self.root = Node(datas.pop(0))
+        cur_root = None
+        waitingRoots = [root]
 
         while waitingList:
+            cur_root = waitingRoots.pop(0)
             
-    # insert levelorder
-    def 
+            if len(datas):
+                cur_root.left = Node(datas.pop(0))
+            if len(datas):
+                cur_root.right = Node(datas.pop(0))
+            
+            waitingRoots.append(cur_root.left)
+            waitingRoots.append(cur_root.right)
+    
+    def print():
+        if not self.root:
+            print("None")
+            return
+        result = [self.root]
+        while result:
+            cur_root = result.pop(0)
+            if cur_root:
+                print(cur.val, sep=" -> ")
+                result.append(cur.left)
+                result.append(cur.right)
+            else:
+                continue
+        print("None")
+
+
+if __name__ == "__main__":
+    tree = Tree([1,2,3,4,5,6,7])
+    tree.print()
