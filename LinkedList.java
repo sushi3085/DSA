@@ -1,6 +1,9 @@
 import System;
 
 public class LinkedList {
+	private Node head;
+	private int length;
+	
 	class Node {
 		int val;
 		Node next;
@@ -12,13 +15,13 @@ public class LinkedList {
 			this.val = val; this.next = Node;
 		}
 	}
-	
-	private Node head;
+
 	public LinkedList(int[] datas) {
 		if(datas.length==0) return;
+		this.length = 0;
 		this.head = new Node(datas[0]);
 		Node tem = head;
-		for(int i=1; i<datas.length; i++) {
+		for(int i=1; i<datas.length; i++, this.length++) {
 			tem.next = new Node(datas[i]);
 			tem = tem.next;
 		}
