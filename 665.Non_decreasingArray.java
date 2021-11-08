@@ -19,16 +19,14 @@ public class Non_decreasingArray {
 
 	private static void solve(int[] arr) {
 		int answer = 0;
-		int[] positionOf = new int[200000];
+		int[] positionOf = new int[200001];
 		Arrays.fill(positionOf, Integer.MIN_VALUE);
+		position[arr[0]] = 0;
 
 		for(int i=1; i<arr.length; i++) {
 			if(arr[i-1] > arr[i]) answer++;
-			if(positionOf[arr[i]]==Integer.MIN_VALUE) positionOf[arr[i]] = i;
-			else {
-				if(i-position[arr[i]] > 2) return false;
-				position[arr[i]] = i;
-			}
+			if(i-position[arr[i]+100000] > 2 && position[arr[i]+100000]!=0) return false;
+			position[arr[i+100000]] = i;
 		}
 		return answer<=1;
 	}
