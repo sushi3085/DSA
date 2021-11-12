@@ -1,4 +1,5 @@
 def searcher():
+	count = 0
 	for j in range(10):
 		for k in range(10):
 			if (6*j + 5*k)%10 == 3:
