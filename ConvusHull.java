@@ -1,7 +1,9 @@
-import Points;
-
 public class ConvusHull{
 	public ConvusHull(Point[] points){
+		ArrayDeque<Point> waiting = new ArrayDeqye<>();
+		waiting.add(points[0]);
+
+		Arrays.sort(waiting);
 		//
 	}
 }
