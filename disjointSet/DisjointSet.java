@@ -10,6 +10,11 @@ public class DisJointSet{
 		while(node!=datas[node])
 			node = datas[node]
 		return node
+		/*
+		* optimized version:
+		if(node == datas[node]) return node;
+		return datas[node] = find(datas[node])
+		*/
 	}
 
 	public void connect(int a, int b){
