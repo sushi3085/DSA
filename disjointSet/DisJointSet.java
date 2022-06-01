@@ -8,8 +8,8 @@ public class DisJointSet{
 
 	public int find(int node){
 		while(node!=datas[node])
-			node = datas[node]
-		return node
+			node = datas[node];
+		return node;
 		/*
 		* optimized version:
 		if(node == datas[node]) return node;

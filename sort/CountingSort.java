@@ -3,7 +3,7 @@
 // or it would be like pos[n] => pos[-9]
 // and that doesn't make any sense
 
-public class CountSort{
+public class CountingSort{
 	public static int[] sort(int[] arr){
 		int len = arr.length;
 		int[] pos = new int[len];

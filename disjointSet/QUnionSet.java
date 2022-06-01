@@ -7,8 +7,8 @@ public class QUnionSet{
 
 	public int find(int node){
 		while(node != datas[node])
-			node = datas[node]
-		return node
+			node = datas[node];
+		return node;
 	}
 
 	public void connect(int a, int b){
