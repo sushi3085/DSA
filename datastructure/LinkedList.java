@@ -1,4 +1,4 @@
-import System;
+package datastructure;
 
 public class LinkedList {
 	private Node head;
@@ -12,7 +12,7 @@ public class LinkedList {
 			this.val = val; this.next = null;
 		}
 		Node(int val, Node next) {
-			this.val = val; this.next = Node;
+			this.val = val; this.next = next;
 		}
 	}
 

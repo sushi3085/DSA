@@ -1,3 +1,5 @@
+package sort;
+
 // precondition: keys must start from 0 and end at n, or you say bigger than 0.
 // cause we need the count of that value, and that value cannot below ZERO
 // or it would be like pos[n] => pos[-9]

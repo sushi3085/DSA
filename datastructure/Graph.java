@@ -1,3 +1,7 @@
+package datastructure;
+
+import java.util.List;
+
 public class Graph{
 	public static void main(String[] args){
 		Node[] nodes = new Node[5];

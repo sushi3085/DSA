@@ -1,3 +1,5 @@
+package datastructure;
+
 public class ArrayQueue {
 	private int[] datas;
 	private int len;
@@ -26,7 +28,7 @@ public class ArrayQueue {
 			front--;
 			return null;
 		}
-		return new Integer(datas[front&7]);
+		return datas[front&7];
 	}
 	
 	public static void main(String[] args) {

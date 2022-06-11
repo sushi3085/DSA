@@ -1,3 +1,5 @@
+package datastructure;
+
 public class Heap{
 	Node top;
 	int size;

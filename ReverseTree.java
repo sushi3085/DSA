@@ -4,7 +4,7 @@ public class ReverseTree{
 		root.left = solve(root.left);
 		root.right = solve(root.right);
 
-		Node tem = left;
+		Node tem = root.left;
 		root.left = root.right;
 		root.right = tem;
 		return root;
